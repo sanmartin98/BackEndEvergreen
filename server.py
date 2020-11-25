@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from controllers.ProyectoAnalitica import ProyectoAnalitica
+from ProyectoAnalitica import ProyectoAnalitica
 
 app = Flask(__name__)
 CORS(app)
@@ -25,4 +25,4 @@ def updateOne():
     return (ProyectoAnalitica.update(body))
 
 if __name__ == '__main__':
-    app.run(port = 80, debug=True,host='0.0.0.0')
+    app.run()
